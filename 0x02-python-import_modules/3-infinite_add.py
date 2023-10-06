@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    #A program that prints the  results of the addition of all argumment
+    """A program that prints the  results of the 
+    addition of all argumment"""
 
     from sys import argv
     count = len(argv)
