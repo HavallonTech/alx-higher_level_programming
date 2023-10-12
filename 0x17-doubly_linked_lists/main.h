@@ -13,7 +13,8 @@ struct dlistint_s{
 }dlistint_t;
 struct dlistint_s *head = NULL;
 struct dlistint_s *current = NULL;
-void insertatbegin(int data);
+size_t print_dlistint(const dlistint_t *h);
+/* void insertatbegin(int data); */
 int printList();
 
 #endif

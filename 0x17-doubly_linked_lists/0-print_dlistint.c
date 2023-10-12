@@ -1,13 +1,21 @@
 #include "main.h"
 /***
+ * print_dlistint - A function to print elements of a doubly link list
+ * @h : Head parameter received
  *
- *
+ * Return : Size_t signed integer data type
  */
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t k;
 	k = 0;
 	/*struct dlistint_s *k = head; */
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+	{
+		dprintf(2, "Error: Can't malloc\n");
+		return (EXIT_FAILURE);
+	}
 	struct dlistint_s *p = h;
 	printf("\n[");
 
@@ -20,36 +28,6 @@ size_t print_dlistint(const dlistint_t *h)
 			printf(",");
 	}
 	printf("]");
+	free(new);
 	return(k);
-}
-void insertatbegin(int data){
-	//create a link
-	struct dlistint_s *lk = (struct dlistint_s*) malloc(sizeof(struct dlistint_s));
-	lk->n = data;
-
-	// point it to old first node
-	lk->next = head;
-
-	//point first to new first node
-	head = lk;
-	//	return(lk);
-}
-void main()
-{
-	size_t k = 0;
-	//size_t k;
-	insertatbegin(12);
-	insertatbegin(22);
-	// print list
-	k = printList();
-	struct dlistint_s *current = head;
-	while (current != NULL) 
-	{
-		struct dlistint_s *temp = current;
-		//printf("hi: %d",current->n);
-		current = current->next;
-		//printf("hi: %d",current->data);
-		free(temp);
-	}
-	printf("-> %lu elements\n", k);
 }
