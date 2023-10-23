@@ -10,8 +10,8 @@ def safe_print_integer(value):
         formatted_value = "{}".format(value)
         check = 2
     try:
+        print(formatted_value)
         if (check == 1):
-            print(formatted_value)
             return (True)
         else:
             return (False)
