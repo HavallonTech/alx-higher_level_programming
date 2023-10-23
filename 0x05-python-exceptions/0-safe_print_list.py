@@ -1,15 +1,16 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
 
-    count = 0
-
-    for b in range(x):
-        try:
-            print("{}".format(my_list[b]), end="")
-            count = count + 1
-        except IndexError:
-            print("Index Error")
-        finally:
-            print("")
-    return (count)
+    try:
+        for b in range(0, x):
+            print(f"{my_list[b]}", end="")
+        return (x)
+    except IndexError:
+        b = 0
+        for a in my_list:
+            b = b + 1
+            x = b
+    finally:
+        print("")
+    return (x)
