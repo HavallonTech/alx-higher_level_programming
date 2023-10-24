@@ -5,7 +5,7 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             a = my_list_1[listitem]
             b = my_list_2[listitem]
-            if isinstance(a ,(int, float)) and isinstance(b ,(int, float)):
+            if isinstance(a, (int, float)) and isinstance(b, (int, float)):
                 temp = a / b
                 result_list.append(temp)
             else:
@@ -18,6 +18,4 @@ def list_division(my_list_1, my_list_2, list_length):
             result_list.append(0)
         except IndexError:
             print("out of range")
-    return(result_list)
-
-    
+    return (result_list)
