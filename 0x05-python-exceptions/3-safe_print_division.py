@@ -2,10 +2,11 @@
 
 def safe_print_division(a, b):
     try:
-        result = a / b
+        if (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+            division = a / b
     except ZeroDivisionError:
-        result = none
+        division = None
     finally:
-        print("Inside result: {}".format(result))
+        print("Inside result: {}".format(division))
         #print("Inside result:",formatted_value)
-        return (result)
+        return (division)
