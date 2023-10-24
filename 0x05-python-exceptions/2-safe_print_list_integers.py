@@ -11,7 +11,7 @@ def safe_print_list_integers(my_list=[], x=0):
             if type(my_list[a]) is int:
                 print("{:d}".format(my_list[a]), end="")
                 incount = incount + 1
-        except:
+        except (IndexError):
             pass
     print("")
     return (intcount)
