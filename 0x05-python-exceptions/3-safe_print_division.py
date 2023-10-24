@@ -2,8 +2,7 @@
 
 def safe_print_division(a, b):
     try:
-        if (isinstance(a, (int)) and isinstance(b, (int))):
-            division = a / b
+        division = a / b
     except ZeroDivisionError:
         division = None
     finally:
