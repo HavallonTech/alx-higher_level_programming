@@ -6,4 +6,4 @@ class Square:
     """A pass statement used to walk throug the class methods"""
 
     def __init__(self, size):
-        self.size = size
+        self.__size = size
