@@ -1,0 +1,55 @@
+=========================================================
+
+add_integer: function that add two integers
+a: the first integer
+b: the second integer
+
+=========================================================
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+=========================================================
+# if two integer is given
+	>>> add_integer(7, 4)
+	11
+
+=========================================================
+# if a of the number is negative
+        >>> add_integer(-2, 6)
+        4
+
+=========================================================
+# if b is a negative number
+        >>> add_integer(6, -3)
+        3
+
+=========================================================
+# if a is a float
+        >>> add_integer(100.3, -2)
+        98
+
+=========================================================
+#  when testing with none numbers strings list and the lik
+
+=========================================================
+# if a is a string
+        >>> add_integer("school", 2)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+=========================================================
+# if b is a string
+        >>> add_integer(45, "school")
+        Traceback (most recent call last):
+        TypeError: b must be an integer
+
+=========================================================
+# if given 3 arguments
+        >>> add_integer(4,6,8)
+        Traceback (most recent call last):
+        TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+========================================================
+# if given a string to convert to float
+        >>> add_integer(4, float("78.8"))
+        82
