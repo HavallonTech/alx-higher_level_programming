@@ -8,8 +8,8 @@ def say_my_name(first_name, last_name=""):
     """
     Function that prints My name is <first name> <last name>
     Args:
-        -fist_name (str): the first name
-        -last_name (str): the last name
+        -fist_name (str): first name
+        -last_name (str): last name
     Raises:
         -TypeError: check for invalid input
     """
