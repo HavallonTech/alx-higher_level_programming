@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-""" A pythong program to create
-    a Rectangle class """
+"""A module that defines a rectangle"""
 
 
 class Rectangle:
-
+    """A class that has a rectangle defined"""
     pass
