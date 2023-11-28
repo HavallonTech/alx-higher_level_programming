@@ -1,0 +1,13 @@
+# 0-add_integer.txt
+==========================================================
+
+add_integer: function that add two integers
+a: the first integer
+b: the second integer
+==========================================================
+>>> add_integer = __import__("0-add_integer").add_integer
+9
+==========================================================
+# if two integer is given
+>>> add_integer(7, 4)
+11

@@ -1,0 +1,67 @@
+# 0-add_integer.txt
+==========================================================
+
+add_integer: function that add two integers
+a: the first integer
+b: the second integer
+
+==========================================================
+
+add_integer: function that add two integers
+a: the first integer
+b: the second integer
+==========================================================
+>>> add_integer = __import__("0-add_integer").add_integer
+
+==========================================================
+# if two integer is given
+>>> add_integer(7, 4)
+11
+
+===========================================================
+# if the first argument is a string
+>>> add_integer("7", 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+===========================================================
+# if the first argument is a float
+>>> add_integer(100.7, 4)
+104
+
+===========================================================
+# if the first argument is a float
+>>> add_integer(4, 100.7)
+104
+
+===========================================================
+# if the second argument is a string
+>>> add_integer(4, "7")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+===========================================================
+# if only one argument was supplied
+>>> add_integer(4, 100.7)
+104
+
+===========================================================
+#if b in a negative value
+>>> add_integer(100, -2)
+98
+
+===========================================================
+#if none is supplied as argument
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+==========================================================
+#if nothing is supplied to the function
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
