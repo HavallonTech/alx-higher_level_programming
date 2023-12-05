@@ -12,4 +12,5 @@ class MyList(list):
         """
          Class method to print the list in sorted order
         """
-        return (sorted(self))
+        retlist = sorted(self)
+        return (retlist)
