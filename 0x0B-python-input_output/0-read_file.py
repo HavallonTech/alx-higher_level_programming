@@ -8,9 +8,6 @@ def read_file(filename=""):
     """
       The function to read from a file
     """
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
-            content = file.read()
-            print(content)
-    except Exception as e:
-        print(f"Error: {e}")
+    with open(filename, 'r', encoding='utf-8') as ff:
+        file_content = ff.read()
+        print(file_content, end = ' ')
