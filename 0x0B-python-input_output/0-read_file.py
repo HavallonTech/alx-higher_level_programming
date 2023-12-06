@@ -11,3 +11,4 @@ def read_file(filename=""):
     with open(filename, 'r', encoding='utf-8') as ff:
         file_content = ff.read()
         print(file_content, end = "")
+    ff.close()
