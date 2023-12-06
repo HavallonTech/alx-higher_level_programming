@@ -10,4 +10,4 @@ def append_write(filename="", text=""):
     strlen = filename
     """ The function to read from a file """
     with open(filename, 'a', encoding='utf-8') as ff:
-        return(ff.write(text))
+        return ff.write(text)
