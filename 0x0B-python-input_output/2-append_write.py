@@ -7,7 +7,8 @@ and returns the number of characters written:
 
 
 def append_write(filename="", text=""):
-    strlen = filename
-    """ The function to read from a file """
+    """ A  function that appends to a file """
+    strlen = len(text)
     with open(filename, 'a', encoding='utf-8') as ff:
-        return ff.write(text)
+        ff.write(text)
+    return (strlen)
