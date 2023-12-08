@@ -8,9 +8,9 @@ Write a class Student that defines a student by:
 class Student:
 
     def __init__(self, first_name, last_name, age):
-    """
-      default method for all instance
-    """
+        """
+          default method for all instance
+        """
         Student.first_name = first_name
         Student.last_name = last_name
         Student.age = age
