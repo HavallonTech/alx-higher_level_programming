@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module for 10-student.py
-Write a class Student that defines a student by: (based on 9-student.py)
+Module for 11-student.py
+Write a class Student that defines a student by: (based on 10-student.py)i
 """
 
 
@@ -21,3 +21,10 @@ class Student:
             return {e: getattr(self, e) for e in attrs if hasattr(self, e)}
         else:
             return (self.__dict__)
+
+    def reload_from_json(self, json):
+        """
+         A method to replace key and values of the dictionary
+        """
+        for key, value in json.items():
+            self.__dict__[key] = value
