@@ -1,32 +1,31 @@
->>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+#The "7-base_geometry.py" module
+===============================================
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-==============================================================
->>> u = BaseGeometry()
+==================================================================
+>>> bg = BaseGeometry()
 
-=========== =====================================================
->>> u.integer_validator("test", 22)
->>> u.integer_validator("string", 19)
 
-===============================================================
->>> u = BaseGeometry()
->>> u.integer_validator("integral", 12)
-Traceback (most recent call last):
-...
-TypeError: <name> must be an integer
-
-================================================================
->>> u = BaseGeometry()
->>> u.integer_validator("my_int", 12)
-Traceback (most recent call last):
-...
-ValueError: <name> must be greater than 0
-
-===============================================================
->>> bg.integer_validator("width", -1)
-Traceback (most recent call last):
-
-=================================================================
->>> bg.integer_validator("width", (2,3))
+==================================================================
+>>> bg.integer_validator("width", 34.98)
 Traceback (most recent call last):
 ...
 TypeError: width must be an integer
+
+================================================================
+>>> bg.integer_validator("width", "you")
+Traceback (most recent call last):
+...
+TypeError: width must be an integer
+
+===================================================================
+>>> bg.integer_validator("width", "98.0")
+Traceback (most recent call last):
+...
+TypeError: width must be an integer
+
+========================================================================
+>>> bg.integer_validator("width", 0)
+Traceback (most recent call last):
+...
+ValueError: width must be greater than 0
