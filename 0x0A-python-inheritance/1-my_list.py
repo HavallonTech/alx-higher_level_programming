@@ -14,7 +14,3 @@ class MyList(list):
         """
         new_list = sorted(self)
         print(new_list)
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
