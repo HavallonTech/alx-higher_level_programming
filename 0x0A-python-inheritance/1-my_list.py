@@ -13,4 +13,4 @@ class MyList(list):
          Class method to print the list in sorted order
         """
         retlist = sorted(self)
-        print (retlist)
+        print(retlist)
