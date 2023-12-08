@@ -12,5 +12,9 @@ class MyList(list):
         """
          Class method to print the list in sorted order
         """
-        retlist = sorted(self)
-        print(retlist)
+        new_list = sorted(self)
+        print(new_list)
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
