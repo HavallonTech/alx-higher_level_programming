@@ -10,7 +10,6 @@ class Square(Rectangle):
         """
         Constructor __init__ - A constructor for instantiation.
         """
-        super().__init__(size, size)
         self.__size = size
         self.integer_validator("size", size)
 
