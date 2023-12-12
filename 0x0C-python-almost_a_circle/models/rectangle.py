@@ -46,7 +46,7 @@ class Rectangle(Base):
             i += 1
 
     def update(self, *args, **kwargs):
-        pass
+        pass        
 
     @property
     def y(self):
