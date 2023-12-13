@@ -8,30 +8,41 @@ from models.base import Base
 
 class Rectangle(Base):
     """
-    The clasee private attribute each with its own setter and getter
+        The clasee private attribute each with its own setter and getter
+        Args: 
+            Base: it takes the base class as an argument
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Calling the super init method of the parent class
+            Calling the super init method of the parent class
+            Args:
+                width, id, height, x and y
+                these arguments are setted using the getter abd setter method
         """
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        """ self.y and self.x calls the setter and
-        getter method as if they were private attributes
+        """ 
+            self.y and self.x calls the setter and
+            getter method as if they were private attributes
         """
     def area(self):
-        """public method of area, to calsulate area of a rectangle
+        """
+            public method of area, to calsulate area of a rectangle
+            Return:
+                Returns the product of height and width which is
+            area of a rectangle
         """
         return (self.height * self.width)
 
     def display(self):
-        """ this method displays the rectangle using the # in place of the
-        Area as calculated
-        exp: y and x are used to add top and left marging before printint
+        """ 
+            this method displays the rectangle using the # in place of the
+            Area as calculated
+            exp: y and x are used to add top and left marging before printint
         """
         space = " "
         a = self.height
@@ -47,7 +58,11 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-        update method to assigns attributes
+            update method to assigns attributes
+            Args:
+                args, kwargs: which are dynamic values 
+                args: a variable arguments without keys
+                kwargs: keyworded arguments
         """
         key = ["id", "width", "height", "x", "y"]
 
@@ -62,10 +77,19 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
-    """ a setter method for protected y"""
+    """ 
+        a setter method for protected y
+        return:
+            Retirns the setted valued of y
+    """
 
     @y.setter
     def y(self, y):
+        """
+            sets the value of y
+            Args:
+                accepts a new value for y and sets it 
+        """
         if (not isinstance(y, int)):
             raise TypeError("y must be an integer")
         if (y < 0):
