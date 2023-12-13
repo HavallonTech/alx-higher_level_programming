@@ -1,19 +1,19 @@
 #!/usr/bin/python3
+
 """
 module for the rectangle class that inherits from the Base class
 """
-
-
 from models.base import Base
 
 
 class Rectangle(Base):
     """
-     The clasee private attribute each with its own setter and getter
+    The clasee private attribute each with its own setter and getter
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-         Calling the super init method of the parent class
+        Calling the super init method of the parent class
         """
         super().__init__(id)
         self.width = width
@@ -21,7 +21,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         """ self.y and self.x calls the setter and
-          getter method as if they were private attributes
+        getter method as if they were private attributes
         """
     def area(self):
         """public method of area, to calsulate area of a rectangle
@@ -30,8 +30,8 @@ class Rectangle(Base):
 
     def display(self):
         """ this method displays the rectangle using the # in place of the
-            Area as calculated
-            exp: y and x are used to add top and left marging before printint
+        Area as calculated
+        exp: y and x are used to add top and left marging before printint
         """
         space = " "
         a = self.height
@@ -46,7 +46,18 @@ class Rectangle(Base):
             i += 1
 
     def update(self, *args, **kwargs):
-        pass        
+        """
+        update method to assigns attributes
+        """
+        key = ["id", "width", "height", "x", "y"]
+
+        if args:
+            for k, arg in enumerate(args):
+                setattr(self,  key[k], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     @property
     def y(self):
