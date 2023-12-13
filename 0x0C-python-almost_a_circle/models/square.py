@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """
         Square class inheriting  from the Rectangle class
-        Args: 
+        Args:
             Rectangle: Theis class inherits from the Rectangle
             class
     """
@@ -34,8 +34,6 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-
-
     def to_dictionary(self):
         """
             return the dictionary representaion of the Square
@@ -53,8 +51,8 @@ class Square(Rectangle):
     def __str__(self):
         """
             str method
-            return: 
-                dormatted dictionary
+            return:
+                formatted dictionary
         """
         return "[Square] ({}) {}/{} - {}".format(self.id,
                                                  self.x, self.y, self.width)

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-module for the rectangle class that inherits from the Base class
+    module for the rectangle class that inherits from the Base class
 """
 from models.base import Base
 
@@ -9,7 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """
         The clasee private attribute each with its own setter and getter
-        Args: 
+        Args:
             Base: it takes the base class as an argument
     """
 
@@ -25,7 +25,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        """ 
+        """
             self.y and self.x calls the setter and
             getter method as if they were private attributes
         """
@@ -39,7 +39,7 @@ class Rectangle(Base):
         return (self.height * self.width)
 
     def display(self):
-        """ 
+        """
             this method displays the rectangle using the # in place of the
             Area as calculated
             exp: y and x are used to add top and left marging before printint
@@ -60,7 +60,7 @@ class Rectangle(Base):
         """
             update method to assigns attributes
             Args:
-                args, kwargs: which are dynamic values 
+                args, kwargs: which are dynamic values
                 args: a variable arguments without keys
                 kwargs: keyworded arguments
         """
@@ -77,7 +77,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
-    """ 
+    """
         a setter method for protected y
         return:
             Retirns the setted valued of y
@@ -88,7 +88,7 @@ class Rectangle(Base):
         """
             sets the value of y
             Args:
-                accepts a new value for y and sets it 
+                accepts a new value for y and sets it
         """
         if (not isinstance(y, int)):
             raise TypeError("y must be an integer")
