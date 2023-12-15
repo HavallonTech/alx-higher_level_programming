@@ -20,8 +20,17 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
-    def draw():
-        """draw function of the base class
+    
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """The to_Json method
+        Args: 
+            Accepts a list dictionary and 
+        Return:
+            a Json string representation of the list
+            This implies dumps would be used
         """
-        pass
+        if (list_dictionaries == None):
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
