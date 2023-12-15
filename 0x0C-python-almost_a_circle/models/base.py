@@ -4,6 +4,7 @@ module for base.py
 """
 
 
+import json
 class Base:
     """private class attribute 
     """
