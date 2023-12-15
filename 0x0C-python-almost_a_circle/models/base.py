@@ -64,21 +64,20 @@ class Base:
         else:
             return (json.loads(json_string))
 
-@classmethod
-def create(cls, **dictionary):
+    @classmethod
+    def create(cls, **dictionary):
         """
         Create method
         Returns:
             an instance with all attributes already set
         """
-        #if dictionary:
-        if cls.__name__ == 'Rectangle':
-                # a new instance is created with square size 1
+        if dictionary:
+            if cls.__name__ == 'Rectangle':
+                """ a new instance is created with square size 1"""
                 new_instance = cls(1, 1)
-            
-        else:
+            else:
                 cls.__name__ == 'Square'
-                #a new_instance with leght and breadth
+                """a new_instance with leght and breadth"""
                 new_instance = cls(1)
-        new_instance.update(**dictionary)
-        return new_instance
+            new_instance.update(**dictionary)
+            return new_instance
