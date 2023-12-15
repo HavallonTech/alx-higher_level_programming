@@ -43,7 +43,7 @@ class Base:
             cls: class name
             list_objs: list of instance 
         """
-        ff = cls.__name__ + "json"
+        ff = "{:s}.json".format(cls.__name__) #cls.__name__ + "json"
         if (list_objs == None):
             list_objs = []
             
