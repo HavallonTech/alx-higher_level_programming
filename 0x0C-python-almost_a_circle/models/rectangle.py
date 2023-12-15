@@ -137,7 +137,7 @@ class Rectangle(Base):
         {self.width}/{self.height}"
 
     def to_dictionary(self):
-        """a method that returns the dictionary representation 
+        """a method that returns the dictionary representation
         of the rectangle
         Args:self
         returns: dictionary
@@ -147,5 +147,10 @@ class Rectangle(Base):
         y_val = self.y
         height_val = self.height
         width_val = self.width
-        my_dictionary = {"id":id_val, "width":width_val, "height":height_val, "x":x_val, "y":y_val}
+        my_dictionary = {
+            "id": id_val,
+            "width": width_val,
+            "height": height_val,
+            "x": x_val,
+            "y": y_val}
         return my_dictionary
