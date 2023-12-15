@@ -45,12 +45,12 @@ class Base:
         """
         ff = cls.__name__ + "json"
         if (list_objs == None):
-            file_to_write = []
-        else:
-            obj_details_list = [obj.to_dictionary() for obj in list_objs]
-            json_data = cls.to_json_string(obj_details_list)
-            with open(ff, 'w') as file:
-                file.write(json_data)
+            list_objs = []
+            
+        obj_details_list = [obj.to_dictionary() for obj in list_objs]
+        json_data = cls.to_json_string(obj_details_list)
+        with open(ff, 'w') as file:
+            file.write(json_data)
     
     @staticmethod
     def from_json_string(json_string):
@@ -62,6 +62,6 @@ class Base:
         if (json_string == None):
             return ([])
         else:
-            json.loads(json_string)
+            return (json.loads(json_string))
         
     
