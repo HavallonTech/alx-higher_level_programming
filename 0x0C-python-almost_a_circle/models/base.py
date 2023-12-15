@@ -98,5 +98,5 @@ class Base:
                     instances.append(instance)
                 return instances
         except IOError:
-            """If an IOError occurs (e.g., file not found), return an empty list"""
+            """If an IOError occurs (file not found), return an empty list"""
             return []
