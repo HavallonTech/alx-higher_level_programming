@@ -141,7 +141,7 @@ class Rectangle(Base):
         of the rectangle
         Args:self
         returns: dictionary
-        """
+        
         id_val = self.id
         x_val = self.x
         y_val = self.y
@@ -152,5 +152,6 @@ class Rectangle(Base):
             "width": width_val,
             "height": height_val,
             "x": x_val,
-            "y": y_val}
-        return my_dictionary
+            "y": y_val}"""
+        return {"x": self.x, "y": self.y, "id": self.id, "height": self.height,
+                "width": self.width}
