@@ -35,3 +35,33 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """A method to save the Json object to a file
+        Args:
+            cls: class name
+            list_objs: list of instance 
+        """
+        ff = cls.__name__ + "json"
+        if (list_objs == None):
+            file_to_write = []
+        else:
+            obj_details_list = [obj.to_dictionary() for obj in list_objs]
+            json_data = cls.to_json_string(obj_details_list)
+            with open(ff, 'w') as file:
+                file.write(json_data)
+    
+    @staticmethod
+    def from_json_string(json_string):
+        """The from_Json_string method
+        Return:
+            a list of Json string representation
+            This implies loads would be used
+        """
+        if (json_string == None):
+            return ([])
+        else:
+            json.loads(json_string)
+        
+    
