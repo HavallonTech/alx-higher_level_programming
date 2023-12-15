@@ -66,32 +66,22 @@ class Base:
 
 @classmethod
 def create(cls, **dictionary):
-    key = ["id", "width", "height", "x", "y"]
-
-        if args:
-            for k, arg in enumerate(args):
-                setattr(self,  key[k], arg)
-        elif kwargs:
-            for key, value in kwargs.items():
-                if hasattr(self, key):
-                    setattr(self, key, value)
-
-def create(cls, **dictionary):
         """
         Create method
         Returns:
             an instance with all attributes already set
         """
-        if dictionary:
-            if cls.__name__ == 'Square':
+        #if dictionary:
+        if cls.__name__ == 'Rectangle':
                 # a new instance is created with square size 1
-                new_instance = cls(1)
-            
-            if cls.__name__ == 'Rectangle':
-                #a new_instance with leght and breadth
                 new_instance = cls(1, 1)
-            new_instance.update(**dictionary)
-            return new_instance
+            
+        else:
+                cls.__name__ == 'Square'
+                #a new_instance with leght and breadth
+                new_instance = cls(1)
+        new_instance.update(**dictionary)
+        return new_instance
 
 def load_from_file(cls):
     ff = f"{cls.__name__}.json"
