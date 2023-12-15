@@ -82,6 +82,3 @@ def create(cls, **dictionary):
                 new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
-
-def load_from_file(cls):
-    ff = f"{cls.__name__}.json"
