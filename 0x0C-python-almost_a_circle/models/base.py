@@ -83,4 +83,4 @@ class Base:
             return new_instance
 
     def load_from_file(cls):
-        
+        pass

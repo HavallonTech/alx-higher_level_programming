@@ -133,8 +133,12 @@ class Rectangle(Base):
         self.__height = height
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} -\
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height
+                )
+        """return f"[Rectangle] ({self.id}) {self.x}/{self.y} -\
         {self.width}/{self.height}"
+        """
 
     def to_dictionary(self):
         """a method that returns the dictionary representation
