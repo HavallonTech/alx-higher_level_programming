@@ -2,11 +2,11 @@
 """
 module for base.py
 """
-
-
 import json
+
+
 class Base:
-    """private class attribute 
+    """private class attribute
     """
     __nb_objects = 0
 
@@ -21,17 +21,17 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """The to_Json method
-        Args: 
-            Accepts a list dictionary and 
+        Args:
+            Accepts a list dictionary and
         Return:
             a Json string representation of the list
             This implies dumps would be used
         """
-        if (list_dictionaries == None):
+        if (list_dictionaries is None):
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -41,17 +41,17 @@ class Base:
         """A method to save the Json object to a file
         Args:
             cls: class name
-            list_objs: list of instance 
+            list_objs: list of instance
         """
         ff = f"{cls.__name__}.json"
-        if (list_objs == None):
+        if (list_objs is None):
             list_objs = []
-            
+
         obj_details_list = [obj.to_dictionary() for obj in list_objs]
         json_data = cls.to_json_string(obj_details_list)
         with open(ff, 'w') as file:
             file.write(json_data)
-    
+
     @staticmethod
     def from_json_string(json_string):
         """The from_Json_string method
@@ -59,9 +59,7 @@ class Base:
             a list of Json string representation
             This implies loads would be used
         """
-        if (json_string == None):
+        if (json_string is None):
             return ([])
         else:
             return (json.loads(json_string))
-        
-    
