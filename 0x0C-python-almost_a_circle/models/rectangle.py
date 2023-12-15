@@ -53,10 +53,7 @@ class Rectangle(Base):
             print("")
             j += 1
         while i <= a:
-            #b = "#" * b
             print(f"{' ' * self.x}{'#' * b}")
-            #print(f"{' ' * self.x}{b}")
-            #print(space * self.x, "#" * b)
             i += 1
 
     def update(self, *args, **kwargs):
