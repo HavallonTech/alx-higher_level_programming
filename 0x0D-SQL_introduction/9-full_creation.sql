@@ -8,7 +8,7 @@ id INT,
 name VARCHAR(256),
 score INT);
 -- Record to be inserted
-INSERT INTO second_table (id, name, score)
+INSERT INTO second_table ("id", "name", "score")
 VALUES 
 (1, "John", 10),
 (2, "Alex", 3),
