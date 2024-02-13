@@ -4,7 +4,7 @@
 
 const argument = process.argv[2];
 const intValue = parseInt(argument);
-if (intValue > 0 ) {
+if (!isNaN(intValue) && argument === String(intValue)) {
 	const final = 'My number: ' + intValue;
 	console.log(final);
 }
