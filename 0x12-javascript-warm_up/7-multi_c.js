@@ -11,6 +11,6 @@ if (intValue > 0 ) {
 		i++;
 	}
 }
-else{
-console.log('Missing number of occurrences')
+else if(isNaN(argument)){
+console.log('Missing number of occurrences');
 }

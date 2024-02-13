@@ -10,5 +10,5 @@ if (intValue > 0 ) {
 	console.log(final);
 }
 else{
-console.log('Not a number')
+console.log('Not a number');
 }
