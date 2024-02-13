@@ -3,8 +3,9 @@
 if the first argument can be converted to an integer*/
 
 let argument = process.argv[2];
-if (typeof argument !== 'undefined') {
-	const intValue = parseInt(argument);
+const intValue = parseInt(argument);
+if (intValue > 0 ) {
+	//const intValue = parseInt(argument);
 	let final = 'My number: ' + intValue;
 	console.log(final);
 }
