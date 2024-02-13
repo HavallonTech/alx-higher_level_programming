@@ -4,14 +4,11 @@
 /*const argv = arguments.length;
 console.log(argv)*/
 
-const argv = process.argv;
+const argv = process.argv[2];
 
-if(argv.length < 3){
-console.log('No argument');
-}
-else if(argv.length === undefined){
+if(typeof argv === 'undefined'){
 console.log('No argument');
 }
 else{
-console.log(argv[2]);
+console.log(argv);
 }
