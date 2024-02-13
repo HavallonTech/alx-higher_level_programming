@@ -11,10 +11,3 @@ console.log('Argument found');
 else {
 console.log('Arguments found');
 }
-/*
-argv.forEach((val, index) =>{
-console.log(i${index}: ${val});
-});
-console.log('C is fun');
-console.log('Python is cool');
-console.log('JavaScript is amazing'); */
