@@ -6,7 +6,7 @@ console.log(argv)*/
 
 const argv = process.argv;
 
-if(argv.lenth < 3){
+if(argv.length < 3){
 console.log('No argument');
 }
 else{
