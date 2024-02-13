@@ -1,16 +1,18 @@
 #!/usr/bin/node
 /* W script that prints a message depending of the number of arguments passed */
 
-/*const argv = arguments.length;*/
+/*const argv = arguments.length;
+console.log(argv)*/
 
 const argv = process.argv.length;
-if (argv < 3){
-console.log('No argument');
-}
-else if (argv === 3){
+if (argv === 3){
 console.log('Argument found');
 }
-else {
+else if (argv > 3)
+{
 console.log('Arguments found');
 }
-/*console.log(argv); */
+else{
+console.log('No argument');
+}
+
