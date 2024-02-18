@@ -20,8 +20,6 @@ if __name__ == "__main__":
     cur.execute("SELECT * from states ORDERED BY id ASC")
     myrow = cur.fetchall()
     for row in myrow:
-        for col in row:
-            print("%s," % col)
-        print("\n")
+        print(row)
     cur.close()
     db.close()
