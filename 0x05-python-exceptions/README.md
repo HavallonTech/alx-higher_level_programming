@@ -1,5 +1,4 @@
-	
-n - Exceptions
+Ok Python - Exceptions
 Python
  By: Guillaume
  Weight: 1
