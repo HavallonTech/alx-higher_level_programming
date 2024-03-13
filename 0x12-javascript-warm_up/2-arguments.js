@@ -3,7 +3,6 @@
 
 const process = require('process');
 
-// Printing process.argv property value
 let args = process.argv;
 
 let totalargs = args.length;
