@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const cars = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+const array_of_element = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (i of cars){
-console.log(i);
+for (const element of array_of_element) {
+  console.log(element);
 }
