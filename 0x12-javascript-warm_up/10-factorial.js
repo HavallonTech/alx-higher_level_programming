@@ -12,7 +12,4 @@ else {
 }
 	
 }
-
-if (parseInt(args[0])){
-	console.log(fact(args[0]));	
-}
+console.log(fact(args[0]));
