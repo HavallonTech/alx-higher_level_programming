@@ -11,6 +11,8 @@ else if (args[1] === undefined)
 	console.log(0);
 }
 else{
-	argsv.sort(a,b=>a-b);
-	console.log(argsv[1]);
+	args.sort(a, b => a - b);
+	//const newArray = Array.from(new Set(args)).sort((a, b) => b - a);
+	//console.log(newArray[1]);
+	console.log(args[1]);
 }
