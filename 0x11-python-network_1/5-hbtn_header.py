@@ -9,10 +9,6 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    if len(argv) < 2:
-        print("Please provide a URL as a command line argument.")
-        exit(1)
-
     url = argv[1]
     req = requests.get(url)
 
