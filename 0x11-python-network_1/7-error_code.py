@@ -8,10 +8,10 @@ import requests
 from sys import argv
 
 
-if __name__ == '__main__':
-    http_req = requests.get(argv[1])
+url = sys.argv[1]
 
-    if http_req.status_code >= 400:
-        print(f'Error code: {req.status_code}')
+  req = requests.get(url)
+   if req.status_code >= 400:
+        print("Error code:", req.status_code)
     else:
-        print(http_req.text)
+        print(req.text)
