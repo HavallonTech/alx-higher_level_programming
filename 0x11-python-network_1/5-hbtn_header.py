@@ -10,13 +10,5 @@ from sys import argv
 
 if __name__ == '__main__':
     url = argv[1]
-    req = requests.get(url)
-
-    if req.status_code == 200:
-        x_request_id = req.headers.get('X-Request-Id')
-        if x_request_id:
-            print(f'X-Request-Id: {x_request_id}')
-        else:
-            print("X-Request-Id header not found in the response.")
-    else:
-        print(f"HTTP Error: {req.status_code}")
+    http_req = requests.get(url)
+    print(http_req.headers.get('X-Request-Id'))
