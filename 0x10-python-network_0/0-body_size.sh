@@ -9,24 +9,4 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-URL=$1
-
-# Send a request using curl and store the response in a temporary file
-TEMP_FILE=$(mktemp)
-curl -sS -o "$TEMP_FILE" "$URL"
-
-# Check if curl request was successful
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to retrieve data from $URL"
-    exit 1
-fi
-
-# Get the size of the response body in bytes
-SIZE=$(wc -c < "$TEMP_FILE")
-
-# Display the size in bytes
-echo "Size of response body from $URL: $SIZE bytes"
-
-# Clean up the temporary file
-rm "$TEMP_FILE"
-
+curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
